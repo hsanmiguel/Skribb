@@ -1,0 +1,90 @@
+/* Header container styling */
+header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 1200px;
+  background-color: #f8f9fa;
+  position: relative;
+}
+
+/* Logo styling - make it take full width */
+header .logo {
+  font-weight: 700;
+  font-size: 2rem;
+  color: #0077cc;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+/* Greeting styling - positioned below logo */
+.greeting {
+  font-size: 1rem;
+  color: #444;
+  background-color: #eef;
+  padding: 4px 10px;
+  border-radius: 5px;
+  margin: 0 0 15px 0;
+  display: block;
+  width: 100%;
+  order: 2;
+  
+  /* Animation for a subtle fade-in effect */
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Username styling */
+.greeting .username {
+  font-weight: 600;
+  color: #0077cc;
+}
+
+/* Navigation styling - positioned to the right */
+header nav {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  gap: 20px;
+}
+
+header nav a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.2s;
+}
+
+header nav a:hover {
+  color: #0077cc;
+}
+
+/* Animation keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  header nav {
+    position: static;
+    margin-top: 10px;
+    align-self: flex-end;
+  }
+}
